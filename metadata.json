@@ -1,0 +1,6 @@
+{
+  "name": "Gou Seva",
+  "description": "Premium full-stack Hindu cow-welfare booking platform.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
