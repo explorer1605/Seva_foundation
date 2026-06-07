@@ -23,11 +23,11 @@ export function resolveModalState(
   const isFutureDate = cellDate.getTime() > todayVal.getTime();
 
   if (isTodayDate) {
-    return { type: "booked_today", sponsorName: booking.sponsor_name };
+    return { type: "booked_today", sponsorName: booking.sponsor_name, place: booking.place ?? null };
   }
 
   if (isFutureDate) {
-    return { type: "booked_future", sponsorName: booking.sponsor_name };
+    return { type: "booked_future", sponsorName: booking.sponsor_name, place: booking.place ?? null };
   }
 
   // Past date
@@ -36,8 +36,9 @@ export function resolveModalState(
       type: "past_booked_with_video",
       sponsorName: booking.sponsor_name,
       youtubeUrl: booking.youtube_url,
+      place: booking.place ?? null,
     };
   }
 
-  return { type: "booked_past_no_video", sponsorName: booking.sponsor_name };
+  return { type: "booked_past_no_video", sponsorName: booking.sponsor_name, place: booking.place ?? null };
 }

@@ -15,6 +15,7 @@ export function AdminForm({ onSuccess, onError }: AdminFormProps) {
   const [sevaDate,     setSevaDate]     = useState("");
   const [sponsorName,  setSponsorName]  = useState("");
   const [youtubeInput, setYoutubeInput] = useState("");
+  const [placeInput,   setPlaceInput]   = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [confirmOverwrite, setConfirmOverwrite] = useState(false);
 
@@ -42,6 +43,15 @@ export function AdminForm({ onSuccess, onError }: AdminFormProps) {
       .then(
         ({ data }) => {
           setExistingBooking(data ?? null);
+          if (data) {
+            setSponsorName(data.sponsor_name || "");
+            setYoutubeInput(data.youtube_url || "");
+            setPlaceInput(data.place || "");
+          } else {
+            setSponsorName("");
+            setYoutubeInput("");
+            setPlaceInput("");
+          }
           setCheckingDuplicate(false);
         },
         (err) => {
@@ -92,6 +102,7 @@ export function AdminForm({ onSuccess, onError }: AdminFormProps) {
             seva_date:    sevaDate,
             sponsor_name: sponsorName.trim(),
             youtube_url,
+            place:        placeInput.trim() || null,
           },
           { onConflict: "seva_date" }
         );
@@ -104,7 +115,7 @@ export function AdminForm({ onSuccess, onError }: AdminFormProps) {
 
       onSuccess(isUpdate ? "updated" : "created");
       setSevaDate(""); setSponsorName(""); 
-      setYoutubeInput(""); setConfirmOverwrite(false);
+      setYoutubeInput(""); setPlaceInput(""); setConfirmOverwrite(false);
     } catch (err) {
       onError(err instanceof Error ? err.message : "Something went wrong.");
     } finally {
@@ -169,6 +180,21 @@ export function AdminForm({ onSuccess, onError }: AdminFormProps) {
           value={youtubeInput}
           onChange={(e) => setYoutubeInput(e.target.value)}
           placeholder="https://youtube.com/watch?v=..."
+          className="w-full border border-[#EBE4D8] rounded-lg p-3 text-[15px] bg-[#FBF8F3]/30 focus:ring-2 focus:ring-[#3D2D20]/10 focus:border-[#3D2D20] focus:outline-none"
+        />
+      </div>
+
+      {/* Place */}
+      <div>
+        <label className="block text-[14px] font-medium text-[#5C4A3E] mb-1.5" htmlFor="place">
+          Place (optional)
+        </label>
+        <input
+          id="place"
+          type="text"
+          value={placeInput}
+          onChange={(e) => setPlaceInput(e.target.value)}
+          placeholder="e.g. Vrindavan"
           className="w-full border border-[#EBE4D8] rounded-lg p-3 text-[15px] bg-[#FBF8F3]/30 focus:ring-2 focus:ring-[#3D2D20]/10 focus:border-[#3D2D20] focus:outline-none"
         />
       </div>

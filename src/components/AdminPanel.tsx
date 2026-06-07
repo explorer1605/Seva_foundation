@@ -49,7 +49,7 @@ export function AdminPanel({ session }: AdminPanelProps) {
 
             {/* WhatsApp Link Icon (Section 20D) */}
             <a 
-              href="https://wa.me/919876543210" 
+              href="https://wa.me/7000731486" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-[#5C4A3E] hover:text-[#3D2D20] transition-colors p-1.5 rounded-full hover:bg-[#FBF8F3] flex items-center justify-center"

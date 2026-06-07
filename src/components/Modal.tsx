@@ -116,6 +116,7 @@ export function Modal({ isOpen, onClose, dateString }: ModalProps) {
             sponsorName={state.sponsorName} 
             youtubeUrl={state.youtubeUrl} 
             formattedDate={formattedDate} 
+            place={state.place}
           />
         )}
 
@@ -125,6 +126,7 @@ export function Modal({ isOpen, onClose, dateString }: ModalProps) {
           <ModalStateC 
             sponsorName={state.sponsorName} 
             type={state.type} 
+            place={state.place}
           />
         )}
       </div>

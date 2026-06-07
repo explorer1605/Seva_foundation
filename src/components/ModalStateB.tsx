@@ -5,16 +5,24 @@ interface ModalStateBProps {
   sponsorName: string;
   youtubeUrl: string;
   formattedDate: string;
+  place: string | null;
 }
 
-export function ModalStateB({ sponsorName, youtubeUrl, formattedDate }: ModalStateBProps) {
+export function ModalStateB({ sponsorName, youtubeUrl, formattedDate, place }: ModalStateBProps) {
   const embedUrl = buildEmbedUrl(youtubeUrl) || "";
 
   return (
     <div className="space-y-4 font-sans">
-      <p className="font-semibold text-[17px] text-[#3D2D20]">
-        Seva by: {sponsorName}
-      </p>
+      <div>
+        <p className="font-semibold text-[17px] text-[#3D2D20]">
+          Seva by: {sponsorName}
+        </p>
+        {place && (
+          <p className="text-[14px] text-[#5C4A3E]/80 font-medium flex items-center gap-1 mt-1">
+            <span>📍 {place}</span>
+          </p>
+        )}
+      </div>
       
       {/* Responsive YouTube Embed */}
       {embedUrl ? (
