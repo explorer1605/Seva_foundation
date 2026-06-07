@@ -5,7 +5,7 @@ import { HeroSection } from "./components/HeroSection";
 import { Modal } from "./components/Modal";
 import { BookingProvider } from "./context/BookingContext";
 import { AdminRoute } from "./components/AdminRoute";
-import instagramLogo from "../assets/.aistudio/250px-Instagram_logo_compressed.svg (1).webp";
+import instagramLogo from "../assets/250px-Instagram_logo_compressed.svg (1).webp";
 
 // Current month/year the calendar displays — changed to match today's real date from metadata
 const CALENDAR_MONTH = 6;   // 1-indexed (6 = June)
