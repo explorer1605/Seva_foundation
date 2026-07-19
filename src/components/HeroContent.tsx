@@ -6,7 +6,7 @@ export function HeroContent() {
       <h1 className="font-serif font-bold text-[#C87941] leading-tight text-[44px] sm:text-[54px] md:text-[64px] lg:text-[72px] tracking-tight hover:text-[#C87941]/95 transition-colors">
         Gou seva Govind Seva
       </h1>
-      <p className="font-serif italic font-normal text-[#5C4A3E] text-[18px] sm:text-[22px] md:text-[25px] lg:text-[28px] leading-relaxed">
+      <p className="font-serif italic font-normal text-body-brown text-[18px] sm:text-[22px] md:text-[25px] lg:text-[28px] leading-relaxed">
         "Every roti you give, feeds the divine."
       </p>
       

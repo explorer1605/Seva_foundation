@@ -11,8 +11,8 @@ export function ModalStateA({ formattedDate }: ModalStateAProps) {
 
   return (
     <div className="space-y-6">
-      <div className="space-y-3 font-sans text-[15px] leading-[1.65] text-[#5C4A3E]">
-        <p className="font-medium text-[#3D2D20]">
+      <div className="space-y-3 font-sans text-[15px] leading-[1.65] text-body-brown">
+        <p className="font-medium text-primary-brown">
           You can provide the Gou Seva today!
         </p>
         <p>
@@ -26,7 +26,7 @@ export function ModalStateA({ formattedDate }: ModalStateAProps) {
           target="_blank"
           rel="noopener noreferrer"
           aria-label={`Book Gou Seva for ${formattedDate} via WhatsApp`}
-          className="flex items-center justify-center gap-2 w-full py-3.5 px-6 rounded-[12px] bg-[#25D366] text-white font-sans font-semibold text-[15px] hover:brightness-105 active:scale-[0.99] transition-all shadow-[0_4px_12px_rgba(37,211,102,0.2)] focus:outline-none focus:ring-2 focus:ring-[#25D366] focus:ring-offset-2 cursor-pointer"
+          className="flex items-center justify-center gap-2 w-full py-3.5 px-6 rounded-[12px] bg-whatsapp-green text-white font-sans font-semibold text-[15px] hover:brightness-105 active:scale-[0.99] transition-all shadow-[0_4px_12px_rgba(37,211,102,0.2)] focus:outline-none focus:ring-2 focus:ring-whatsapp-green focus:ring-offset-2 cursor-pointer"
         >
           {/* Custom inline vector logo of whatsapp */}
           <svg 

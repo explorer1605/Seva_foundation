@@ -69,7 +69,7 @@ export function Modal({ isOpen, onClose, dateString }: ModalProps) {
 
   return (
     <div 
-      className="fixed inset-0 z-50 flex items-end md:items-center justify-center p-0 md:p-4 bg-[#3D2D20]/40 backdrop-blur-[4px] font-sans"
+      className="fixed inset-0 z-50 flex items-end md:items-center justify-center p-0 md:p-4 bg-primary-brown/40 backdrop-blur-[4px] font-sans"
       role="dialog"
       aria-modal="true"
       aria-labelledby="modal-date-title"
@@ -90,7 +90,7 @@ export function Modal({ isOpen, onClose, dateString }: ModalProps) {
         {/* Close button with lucide X */}
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 p-2 text-[#5C4A3E] hover:text-[#3D2D20] rounded-full hover:bg-[#F5F1E9] transition-all focus:outline-none focus:ring-2 focus:ring-[#3D2D20] cursor-pointer"
+          className="absolute top-4 right-4 p-2 text-body-brown hover:text-primary-brown rounded-full hover:bg-section transition-all focus:outline-none focus:ring-2 focus:ring-primary-brown cursor-pointer"
           aria-label="Close dialog"
         >
           <X className="w-6 h-6" />
@@ -100,7 +100,7 @@ export function Modal({ isOpen, onClose, dateString }: ModalProps) {
         <div className="mb-6 pr-6">
           <h3 
             id="modal-date-title"
-            className="font-serif font-semibold text-[22px] text-[#3D2D20] leading-snug"
+            className="font-serif font-semibold text-[22px] text-primary-brown leading-snug"
           >
             {formattedDate}
           </h3>

@@ -20,7 +20,7 @@ export function AdminRoute() {
     return () => listener.subscription.unsubscribe();
   }, []);
 
-  if (checking) return <div className="p-8 text-center font-sans text-[#5C4A3E] animate-pulse">Checking session…</div>;
+  if (checking) return <div className="p-8 text-center font-sans text-body-brown animate-pulse">Checking session…</div>;
   if (!session)  return <AdminLogin />;
   return <AdminPanel session={session} />;
 }

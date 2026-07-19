@@ -18,7 +18,7 @@ export function HeroSection({
   onDateSelect,
 }: HeroSectionProps) {
   return (
-    <section className="min-h-screen pt-[72px] flex items-center justify-center px-4 md:px-8 py-12">
+    <section className="min-h-screen pt-18 flex items-center justify-center px-4 md:px-8 py-12">
       <div className="max-w-7xl w-full mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-12 items-center gap-y-12 md:gap-x-8">
           

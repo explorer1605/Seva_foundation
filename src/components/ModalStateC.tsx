@@ -20,16 +20,16 @@ export function ModalStateC({ sponsorName, type, place }: ModalStateCProps) {
   return (
     <div className="space-y-4 font-sans">
       <div>
-        <p className="font-semibold text-[17px] text-[#3D2D20]">
+        <p className="font-semibold text-[17px] text-primary-brown">
           Seva by: {sponsorName}
         </p>
         {place && (
-          <p className="text-[14px] text-[#5C4A3E]/80 font-medium flex items-center gap-1 mt-1">
+          <p className="text-[14px] text-body-brown/80 font-medium flex items-center gap-1 mt-1">
             <span>📍 {place}</span>
           </p>
         )}
       </div>
-      <p className="font-normal text-[14px] text-[#5C4A3E] leading-[1.6]">
+      <p className="font-normal text-[14px] text-body-brown leading-[1.6]">
         {statusText}
       </p>
     </div>

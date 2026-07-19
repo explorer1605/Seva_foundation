@@ -53,7 +53,7 @@ function PublicHome() {
 
   return (
     <BookingProvider>
-      <div className="min-h-screen bg-[#FBF8F3] text-[#5C4A3E] font-sans antialiased selection:bg-[#EBE4D8] selection:text-[#3D2D20] flex flex-col justify-between">
+      <div className="min-h-screen bg-canvas text-body-brown font-sans antialiased selection:bg-divider-beige selection:text-primary-brown flex flex-col justify-between">
         <div>
           <NavBar />
           
@@ -80,8 +80,8 @@ function PublicHome() {
 
 function FooterSocials() {
   return (
-    <footer className="w-full py-8 px-6 md:px-12 flex flex-col md:flex-row justify-between items-center gap-4 max-w-7xl mx-auto border-t border-[#EBE4D8]/60 mt-12 bg-[#FBF8F3]">
-      <div className="text-xs font-sans text-[#5C4A3E]/60 text-center md:text-left">
+    <footer className="w-full py-8 px-6 md:px-12 flex flex-col md:flex-row justify-between items-center gap-4 max-w-7xl mx-auto border-t border-divider-beige/60 mt-12 bg-canvas">
+      <div className="text-xs font-sans text-body-brown/60 text-center md:text-left">
         © 2026 Seva Foundation. All rights reserved. Seva Parmo Dharm.
       </div>
       <div className="flex items-center gap-4">

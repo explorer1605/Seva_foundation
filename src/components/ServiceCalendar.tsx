@@ -35,19 +35,19 @@ export function ServiceCalendar({
 
   return (
     <div
-      className="bg-white border-[1.5px] border-[#3D2D20] rounded-[16px] shadow-[0_8px_32px_rgba(61,45,32,0.10)] w-full max-w-[420px] overflow-hidden mx-auto md:mx-0 flex flex-col justify-between"
+      className="bg-white border-[1.5px] border-primary-brown rounded-[16px] shadow-[0_8px_32px_rgba(61,45,32,0.10)] w-full max-w-[420px] overflow-hidden mx-auto md:mx-0 flex flex-col justify-between"
       id="service-calendar-card"
     >
       {/* CARD HEADER - DEEP GREEN OVER WITH NAVIGATION */}
-      <div className="bg-[#3B533A] py-[18px] px-[20px] border-b border-[#3D2D20]">
+      <div className="bg-available-green py-[18px] px-[20px] border-b border-primary-brown">
         <h2 className="font-serif font-semibold text-[24px] text-white tracking-wide text-center">
           Seva parmo Dharm
         </h2>
-        <div className="flex items-center justify-between mt-2 px-1 text-[#EBE4D8]">
+        <div className="flex items-center justify-between mt-2 px-1 text-divider-beige">
           <button
             type="button"
             onClick={onPrevMonth}
-            className="p-1.5 rounded-full hover:bg-white/10 active:scale-95 transition-all focus:outline-none focus:ring-1 focus:ring-[#EBE4D8]/50 cursor-pointer"
+            className="p-1.5 rounded-full hover:bg-white/10 active:scale-95 transition-all focus:outline-none focus:ring-1 focus:ring-divider-beige/50 cursor-pointer"
             aria-label="Previous Month"
           >
             <ChevronLeft className="w-5 h-5 text-white" />
@@ -58,7 +58,7 @@ export function ServiceCalendar({
           <button
             type="button"
             onClick={onNextMonth}
-            className="p-1.5 rounded-full hover:bg-white/10 active:scale-95 transition-all focus:outline-none focus:ring-1 focus:ring-[#EBE4D8]/50 cursor-pointer"
+            className="p-1.5 rounded-full hover:bg-white/10 active:scale-95 transition-all focus:outline-none focus:ring-1 focus:ring-divider-beige/50 cursor-pointer"
             aria-label="Next Month"
           >
             <ChevronRight className="w-5 h-5 text-white" />
@@ -70,7 +70,7 @@ export function ServiceCalendar({
         {/* Error State */}
         {error ? (
           <div className="py-8 text-center" id="calendar-error-msg">
-            <p className="text-[#A94A42] text-sm font-medium">
+            <p className="text-booked-red text-sm font-medium">
               Could not load bookings. Please check your connection.
             </p>
           </div>
@@ -80,7 +80,7 @@ export function ServiceCalendar({
             {Array.from({ length: 35 }).map((_, idx) => (
               <div
                 key={`skeleton-${idx}`}
-                className="w-[48px] h-[48px] rounded-full bg-[#EBE4D8] animate-pulse"
+                className="w-[48px] h-[48px] rounded-full bg-divider-beige animate-pulse"
               />
             ))}
           </div>
@@ -91,7 +91,7 @@ export function ServiceCalendar({
             {["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"].map((dayName, idx) => (
               <div
                 key={`header-${idx}`}
-                className="font-sans font-semibold text-[11px] text-[#5C4A3E] text-center w-[41px] md:w-[42px] h-6 flex items-center justify-center select-none"
+                className="font-sans font-semibold text-[11px] text-body-brown text-center w-[41px] md:w-[42px] h-6 flex items-center justify-center select-none"
               >
                 {dayName}
               </div>
