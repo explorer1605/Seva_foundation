@@ -6,7 +6,7 @@ interface ModalStateAProps {
 
 export function ModalStateA({ formattedDate }: ModalStateAProps) {
   const WHATSAPP_NUMBER_PLACEHOLDER = "7000731486"; 
-  const messageText = `Namaste, I would like to book Gou Seva for ${formattedDate}`;
+  const messageText = `Radhe Radhe, I would like to book Gou Seva for ${formattedDate}`;
   const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER_PLACEHOLDER}?text=${encodeURIComponent(messageText)}`;
 
   return (
