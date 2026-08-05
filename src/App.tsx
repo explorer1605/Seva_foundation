@@ -8,7 +8,7 @@ import { AdminRoute } from "./components/AdminRoute";
 import instagramLogo from "../assets/250px-Instagram_logo_compressed.svg (1).webp";
 
 // Current month/year the calendar displays — changed to match today's real date from metadata
-const CALENDAR_MONTH = 7;   // 1-indexed (6 = June)
+const CALENDAR_MONTH = 8;   // 1-indexed (6 = June)
 const CALENDAR_YEAR  = 2026;
 
 // Public Home route wrapping components
