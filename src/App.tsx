@@ -82,7 +82,7 @@ function FooterSocials() {
   return (
     <footer className="w-full py-8 px-6 md:px-12 flex flex-col md:flex-row justify-between items-center gap-4 max-w-7xl mx-auto border-t border-divider-beige/60 mt-12 bg-canvas">
       <div className="text-xs font-sans text-body-brown/60 text-center md:text-left">
-        © 2026 Seva Foundation. All rights reserved. Seva Parmo Dharm.
+        © 2026 Samarpan Foundation. All rights reserved. Seva Parmo Dharm.
       </div>
       <div className="flex items-center gap-4">
         {/* YouTube Icon */}
