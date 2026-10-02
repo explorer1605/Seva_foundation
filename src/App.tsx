@@ -6,11 +6,11 @@ import { Modal } from "./components/Modal";
 import { BookingProvider } from "./context/BookingContext";
 import { AdminRoute } from "./components/AdminRoute";
 import instagramLogo from "../assets/250px-Instagram_logo_compressed.svg (1).webp";
-
+const today = new Date();
 // Current month/year the calendar displays — changed to match today's real date from metadata
-const CALENDAR_MONTH = 8;   // 1-indexed (6 = June)
-const CALENDAR_YEAR  = 2026;
-
+const CALENDAR_MONTH = today.getMonth() + 1;   // 1-indexed (6 = June)
+const CALENDAR_YEAR = 2026;
+console.log(CALENDAR_MONTH, " is the calendar month");
 // Public Home route wrapping components
 function PublicHome() {
   const [currentMonth, setCurrentMonth] = useState<number>(CALENDAR_MONTH);
@@ -56,22 +56,22 @@ function PublicHome() {
       <div className="min-h-screen bg-canvas text-body-brown font-sans antialiased selection:bg-divider-beige selection:text-primary-brown flex flex-col justify-between">
         <div>
           <NavBar />
-          
-          <HeroSection 
-            month={currentMonth} 
-            year={currentYear} 
+
+          <HeroSection
+            month={currentMonth}
+            year={currentYear}
             onPrevMonth={handlePrevMonth}
             onNextMonth={handleNextMonth}
-            onDateSelect={handleDateSelect} 
+            onDateSelect={handleDateSelect}
           />
         </div>
 
         <FooterSocials />
 
-        <Modal 
-          isOpen={isModalOpen} 
-          onClose={handleCloseModal} 
-          dateString={selectedDate || ""} 
+        <Modal
+          isOpen={isModalOpen}
+          onClose={handleCloseModal}
+          dateString={selectedDate || ""}
         />
       </div>
     </BookingProvider>
@@ -86,30 +86,30 @@ function FooterSocials() {
       </div>
       <div className="flex items-center gap-4">
         {/* YouTube Icon */}
-        <a 
+        <a
           href="https://www.youtube.com/@Gousevagovindseva"
-          target="_blank" 
+          target="_blank"
           rel="noopener noreferrer"
           className="hover:scale-110 active:scale-95 transition-transform"
           aria-label="Visit our YouTube stream"
         >
           <svg className="w-10 h-10 text-[#FF0000]" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.11C19.517 3.545 12 3.545 12 3.545s-7.517 0-9.388.508a3.003 3.003 0 0 0-2.11 2.11C0 8.033 0 12 0 12s0 3.967.502 5.837a3.003 3.003 0 0 0 2.11 2.11c1.871.508 9.388.508 9.388.508s7.517 0 9.388-.508a3.003 3.003 0 0 0 2.11-2.11c.502-1.87.502-5.837.502-5.837s0-3.967-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+            <path d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.11C19.517 3.545 12 3.545 12 3.545s-7.517 0-9.388.508a3.003 3.003 0 0 0-2.11 2.11C0 8.033 0 12 0 12s0 3.967.502 5.837a3.003 3.003 0 0 0 2.11 2.11c1.871.508 9.388.508 9.388.508s7.517 0 9.388-.508a3.003 3.003 0 0 0 2.11-2.11c.502-1.87.502-5.837.502-5.837s0-3.967-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
           </svg>
         </a>
 
         {/* Instagram Icon */}
-        <a 
-          href="https://instagram.com" 
-          target="_blank" 
+        <a
+          href="https://instagram.com"
+          target="_blank"
           rel="noopener noreferrer"
           className="hover:scale-110 active:scale-95 transition-transform"
           aria-label="Follow us on Instagram"
         >
-          <img 
-            src={instagramLogo} 
-            alt="Instagram" 
-            className="w-10 h-10 object-contain rounded-xl" 
+          <img
+            src={instagramLogo}
+            alt="Instagram"
+            className="w-10 h-10 object-contain rounded-xl"
             referrerPolicy="no-referrer"
           />
         </a>

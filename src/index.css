@@ -1,10 +1,8 @@
 @import "tailwindcss";
 
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Poppins:wght@400;500;600&display=swap');
-
 @theme {
-  --font-serif: "Cormorant Garamond", Georgia, serif;
-  --font-sans: "Poppins", system-ui, sans-serif;
+  --font-serif: Georgia, serif;
+  --font-sans: system-ui, sans-serif;
 
   --color-canvas: #FBF8F3;
   --color-section: #F5F1E9;
@@ -21,4 +19,3 @@ body {
   color: var(--color-body-brown);
   font-family: var(--font-sans);
 }
-
